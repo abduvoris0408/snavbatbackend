@@ -1,6 +1,6 @@
 // controllers/organizationController.js
 
-const Organization = require('../models/Organization');
+const Organization = require('../models/organization');
 
 // Tashkilot qo‘shish (Admin uchun)
 exports.addOrganization = async (req, res) => {

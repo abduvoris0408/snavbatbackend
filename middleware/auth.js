@@ -1,7 +1,7 @@
 // middleware/auth.js
 
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const User = require('../models/user');
 
 // Auth middleware: JWT tokenni tekshirish
 const protect = async (req, res, next) => {
