@@ -1,4 +1,4 @@
-const Queue = require('../models/Queue');
+const Queue = require('../models/queue');
 const asyncHandler = require('../utils/asyncHandler');
 
 exports.addToQueue = asyncHandler(async (req, res) => {
