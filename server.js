@@ -8,9 +8,6 @@ const connectDB = require('./config/db')
 // Portni olish .env yoki 5000 dan
 const PORT = process.env.PORT || 5000
 
-// MongoDB ga ulanamiz
-connectDB()
-
 // HTTP server yaratamiz
 const server = http.createServer(app)
 
@@ -29,8 +26,4 @@ app.set('io', io)
 // Serverni ishga tushirish
 server.listen(PORT, () => {
 	console.log(`🚀 Server ${PORT}-portda ishga tushdi`)
-})
-
-app.listen(process.env.PORT || 10000, () => {
-	console.log(`🚀 Server ${process.env.PORT || 10000}-portda ishga tushdi`)
 })
