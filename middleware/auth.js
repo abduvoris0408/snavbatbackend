@@ -14,7 +14,7 @@ const protect = async (req, res, next) => {
       token = req.headers.authorization.split(' ')[1];
 
       // JWT tokenni tekshirish
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      const decoded = jwt.verify(token, "secret");
 
       // Tokenni tekshirgandan keyin, foydalanuvchini req.user ga joylash
       req.user = await User.findById(decoded.id).select('-password');
