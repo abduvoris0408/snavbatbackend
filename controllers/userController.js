@@ -39,7 +39,7 @@ exports.login = async (req, res) => {
 		if (!isMatch)
 			return res.status(400).json({ message: 'Noto‘g‘ri parol' })
 
-		const token = jwt.sign({ id: user._id }, 'secret', { expiresIn: '1h' })
+		const token = jwt.sign({ id: user._id }, 'secret', { expiresIn: '24h' })
 		res.json({ token })
 	} catch (error) {
 		res.status(500).json({
